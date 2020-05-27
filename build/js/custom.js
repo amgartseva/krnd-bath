@@ -5,10 +5,6 @@ function headerPhoneClicked() {
     event_label: 'tel-header',
   })
   ym(64389454, 'reachGoal', 'van-tel-header')
-  return true
-  var _tmr = window._tmr || (window._tmr = [])
-  _tmr.push({ id: '3170443', type: 'reachGoal', goal: 'van-tel-header' })
-  VK.Goal('contact')
 }
 
 // Форма в первом экране
@@ -19,9 +15,6 @@ function firstFormSubmit() {
   })
 
   ym(64389454, 'reachGoal', 'van-first-form')
-
-  var _tmr = window._tmr || (window._tmr = [])
-  _tmr.push({ id: '3170443', type: 'reachGoal', goal: 'van-first-form' })
 }
 
 // Форма в калькуляторе
@@ -37,12 +30,6 @@ function calcFormSubmit(event) {
   })
 
   ym(64389454, 'reachGoal', 'van-calc')
-
-  var _tmr = window._tmr || (window._tmr = [])
-  _tmr.push({ id: '3170443', type: 'reachGoal', goal: 'van-calc' })
-
-  // Кладем цену в объект цели ВК
-  VK.Goal('lead', { value: params.price })
 }
 
 // Форма после FAQ
@@ -53,11 +40,6 @@ function faqFormSubmit() {
   })
 
   ym(64389454, 'reachGoal', 'van-form-consult')
-
-  var _tmr = window._tmr || (window._tmr = [])
-  _tmr.push({ id: '3170443', type: 'reachGoal', goal: 'van-form-consult' })
-
-  VK.Goal('lead')
 }
 
 function invoiceFormSubmit() {
@@ -67,11 +49,6 @@ function invoiceFormSubmit() {
   })
 
   ym(64389454, 'reachGoal', 'van-form-invioce')
-
-  var _tmr = window._tmr || (window._tmr = [])
-  _tmr.push({ id: '3170443', type: 'reachGoal', goal: 'van-form-invioce' })
-
-  VK.Goal('lead')
 }
 
 //Переход к калькулятору
@@ -82,11 +59,6 @@ function toCalcGoal() {
   })
 
   ym(64389454, 'reachGoal', 'van-to-calc')
-
-  var _tmr = window._tmr || (window._tmr = [])
-  _tmr.push({ id: '3170443', type: 'reachGoal', goal: 'van-to-calc' })
-
-  VK.Goal('customize_product')
 }
 
 // Форма с замером
@@ -97,11 +69,6 @@ function zamerFormSubmit() {
   })
 
   ym(64389454, 'reachGoal', 'van-form-zamer')
-
-  var _tmr = window._tmr || (window._tmr = [])
-  _tmr.push({ id: '3170443', type: 'reachGoal', goal: 'van-form-zamer' })
-
-  VK.Goal('lead')
 }
 
 // Клик по телефону в футере
@@ -112,11 +79,6 @@ function footerPhoneClicked() {
   })
 
   ym(64389454, 'reachGoal', 'van-tel-footer')
-
-  var _tmr = window._tmr || (window._tmr = [])
-  _tmr.push({ id: '3170443', type: 'reachGoal', goal: 'van-tel-footer' })
-
-  VK.Goal('contact')
 }
 
 function bxCheck() {
