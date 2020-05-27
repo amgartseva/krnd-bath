@@ -4,7 +4,7 @@ function headerPhoneClicked() {
     event_category: 'calls',
     event_label: 'tel-header',
   })
-  ym(56487667, 'reachGoal', 'van-tel-header')
+  ym(64389454, 'reachGoal', 'van-tel-header')
   return true
   var _tmr = window._tmr || (window._tmr = [])
   _tmr.push({ id: '3170443', type: 'reachGoal', goal: 'van-tel-header' })
@@ -18,7 +18,7 @@ function firstFormSubmit() {
     event_label: 'first',
   })
 
-  ym(56487667, 'reachGoal', 'van-first-form')
+  ym(64389454, 'reachGoal', 'van-first-form')
 
   var _tmr = window._tmr || (window._tmr = [])
   _tmr.push({ id: '3170443', type: 'reachGoal', goal: 'van-first-form' })
@@ -36,7 +36,7 @@ function calcFormSubmit(event) {
     event_label: 'van-calc',
   })
 
-  ym(56487667, 'reachGoal', 'van-calc')
+  ym(64389454, 'reachGoal', 'van-calc')
 
   var _tmr = window._tmr || (window._tmr = [])
   _tmr.push({ id: '3170443', type: 'reachGoal', goal: 'van-calc' })
@@ -52,7 +52,7 @@ function faqFormSubmit() {
     event_label: 'faq',
   })
 
-  ym(56487667, 'reachGoal', 'van-form-consult')
+  ym(64389454, 'reachGoal', 'van-form-consult')
 
   var _tmr = window._tmr || (window._tmr = [])
   _tmr.push({ id: '3170443', type: 'reachGoal', goal: 'van-form-consult' })
@@ -66,7 +66,7 @@ function invoiceFormSubmit() {
     event_label: 'invioce',
   })
 
-  ym(56487667, 'reachGoal', 'van-form-invioce')
+  ym(64389454, 'reachGoal', 'van-form-invioce')
 
   var _tmr = window._tmr || (window._tmr = [])
   _tmr.push({ id: '3170443', type: 'reachGoal', goal: 'van-form-invioce' })
@@ -81,7 +81,7 @@ function toCalcGoal() {
     event_label: 'to-calc',
   })
 
-  ym(56487667, 'reachGoal', 'van-to-calc')
+  ym(64389454, 'reachGoal', 'van-to-calc')
 
   var _tmr = window._tmr || (window._tmr = [])
   _tmr.push({ id: '3170443', type: 'reachGoal', goal: 'van-to-calc' })
@@ -96,7 +96,7 @@ function zamerFormSubmit() {
     event_label: 'form-zamer',
   })
 
-  ym(56487667, 'reachGoal', 'van-form-zamer')
+  ym(64389454, 'reachGoal', 'van-form-zamer')
 
   var _tmr = window._tmr || (window._tmr = [])
   _tmr.push({ id: '3170443', type: 'reachGoal', goal: 'van-form-zamer' })
@@ -111,7 +111,7 @@ function footerPhoneClicked() {
     event_label: 'tel-footer',
   })
 
-  ym(56487667, 'reachGoal', 'van-tel-footer')
+  ym(64389454, 'reachGoal', 'van-tel-footer')
 
   var _tmr = window._tmr || (window._tmr = [])
   _tmr.push({ id: '3170443', type: 'reachGoal', goal: 'van-tel-footer' })
