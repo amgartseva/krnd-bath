@@ -81,17 +81,6 @@ function footerPhoneClicked() {
   ym(64389454, 'reachGoal', 'van-tel-footer')
 }
 
-function bxCheck() {
-  const code =
-    'a0fa9e5e0046adbe0046400200000009000003bb99783844f1722542a535936c522853'
-  const secret = 'y8G1K0EflMwVMdz90CVPMlLyvzjKMNHmdnBpfhe5vHELhorauq'
-  const appId = 'local.5e9eef71a11fa5.94139689'
-
-  fetch(
-    `https://oauth.bitrix.info/oauth/token/?grant_type=authorization_code&client_id=${appId}&client_secret=${secret}&code=${code}`
-  )
-}
-
 'use strict'
 
 const decrement = document.querySelector('.calculator__button_decrement'),
