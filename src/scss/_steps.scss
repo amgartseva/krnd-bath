@@ -1,0 +1,140 @@
+.steps {
+  padding: 64px 0;
+
+  @media (max-width: 1200px) {
+    padding: 32px 0;
+  }
+
+  &__grid {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 170px;
+    row-gap: 30px;
+    padding: 36px 30px 0 30px;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 630px) {
+      column-gap: 130px;
+      padding: 36px 22px 0 22px;
+    }
+
+    @media (max-width: 550px) {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+  }
+
+  &__grid-item {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 120px;
+      right: -130px;
+      width: 84px;
+      height: 12px;
+      background-repeat: no-repeat;
+      background-image: url('../svg/sprite.svg#doted');
+      background-position: center;
+      background-size: 100%;
+
+      @media (max-width: 550px) {
+        display: none;
+      }
+
+      @media (max-width: 420px) {
+        bottom: -185px;
+      }
+    }
+
+    &:nth-of-type(1),
+    &:nth-of-type(2),
+    &:nth-of-type(4),
+    &:nth-of-type(5) {
+      &::before {
+        content: '';
+      }
+    }
+
+    @media (max-width: 1200px) {
+      &:nth-of-type(2),
+      &:nth-of-type(4) {
+        &::before {
+          display: none;
+        }
+      }
+
+      &:nth-of-type(3) {
+        &::before {
+          content: '';
+        }
+      }
+    }
+
+    @media (max-width: 550px) {
+      content: '' !important;
+      display: block !important;
+    }
+  }
+
+  &__icon-container {
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 2px solid #e0e0e0;
+    width: 100%;
+    align-items: flex-end;
+    padding: 0 0 8px 0;
+
+    @media (max-width: 550px) {
+      justify-content: center;
+    }
+  }
+
+  &__icon {
+    width: 126px;
+    height: 126px;
+    transform: translateX(8px);
+
+    @media (max-width: 550px) {
+      width: 64px;
+      height: 64px;
+      transform: translate(0);
+    }
+  }
+
+  &__icon-number {
+    font-size: 64px;
+    line-height: 60px;
+    color: #e0e0e0;
+    font-family: 'MontserratBold';
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    font-family: 'MontserratBold';
+    color: $title-gray;
+    margin: 12px 0 0 0;
+
+    span {
+      color: $yellow;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  &__paragraph {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: $title-gray;
+    margin: 12px 0 0 0;
+  }
+}

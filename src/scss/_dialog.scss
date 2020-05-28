@@ -1,0 +1,162 @@
+.dialog-same {
+  background-image: url('../images/modal-smeta.jpg');
+  background-position: bottom right;
+}
+
+.dialog-discount {
+  background-image: url('../images/modal-discount.jpg');
+  background-position: top right;
+}
+
+.dialog {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  max-width: 580px;
+  max-height: 525px;
+  padding: 43px 94px 43px 94px;
+  background: #fff;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: 500ms all;
+  transform: translateY(-50px);
+
+  &_youtube {
+    padding: 0 !important;
+    width: auto;
+    max-width: 768px;
+    max-height: 420px;
+    background: transparent;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media (max-width: 615px) {
+    width: calc(100% - 32px);
+    padding: 36px 24px 24px 16px;
+  }
+
+  @media (max-width: 450px) {
+    max-height: 520px;
+  }
+
+  @media (max-width: 370px) {
+    max-height: 530px;
+    padding: 24px 16px;
+  }
+
+  &_active {
+    transform: translate(0);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__bg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background: #333333;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: 300ms all;
+
+    &_active {
+      opacity: 0.8;
+      visibility: visible;
+    }
+  }
+
+  &__сlose {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+    fill: #333;
+    transition: 100ms all;
+
+    &:hover {
+      fill: #000;
+      transform: scale(1.1);
+    }
+  }
+
+  &__title {
+    font-family: 'MontserratBold';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+
+    @media (max-width: 615px) {
+      font-size: 22px;
+      line-height: 27px;
+    }
+
+    @media (max-width: 450px) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__price {
+    font-family: 'MontserratBold';
+    font-style: normal;
+    font-weight: bold;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__subtitle {
+    margin: 16px 0 0 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 0 0 0 16px;
+    position: relative;
+
+    @media (max-width: 615px) {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    &::before {
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      content: '';
+      position: absolute;
+      width: 4px;
+      height: 48px;
+      left: 0px;
+      background: $yellow;
+    }
+  }
+}
+
+.dialog-faq {
+  max-width: 400px;
+  padding: 42px 40px 56px 40px;
+  max-height: 475px;
+
+  @media (max-width: 370px) {
+    padding: 24px 16px;
+    max-height: 415px;
+  }
+}

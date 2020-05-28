@@ -1,0 +1,55 @@
+.policy {
+  width: calc(100% - 32px);
+  max-width: 1200px;
+  margin: auto;
+  padding: 86px 0;
+
+  @media (max-width: 768px) {
+    padding: 24px 0;
+  }
+
+  &__back {
+    color: $title-gray;
+    font-size: 18px;
+    position: relative;
+    padding: 0 0 0 32px;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 16px;
+      width: 16px;
+      transform: rotateZ(180deg);
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      left: 6px;
+      background-image: url('../svg/sprite.svg#arrow-gray');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &:hover {
+      .policy__back {
+        &::before {
+          transform: translateX(-6px);
+        }
+      }
+    }
+  }
+
+  h1 {
+    text-align: center;
+    margin: 24px 0 0 0;
+  }
+
+  h3 {
+    margin: 24px 0 0 0;
+  }
+
+  p {
+    margin: 12px 0 0 12px;
+  }
+}

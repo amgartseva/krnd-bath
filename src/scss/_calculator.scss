@@ -1,0 +1,522 @@
+.calc-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 110px 0 135px 0;
+  background: #fff;
+
+  @media (max-width: 1200px) {
+    background-image: none;
+  }
+
+  @media (max-width: 700px) {
+    padding: 32px 0;
+  }
+}
+
+.calculator {
+  background: #ffffff;
+  box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  width: calc(100% - 32px);
+  max-width: 910px;
+  padding: 54px 30px 34px 30px;
+
+  @media (max-width: 900px) {
+    max-width: 505px;
+    padding: 36px 30px;
+  }
+
+  @media (max-width: 500px) {
+    padding: 24px 16px;
+  }
+
+  &__priceblock {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 0 12px 0;
+
+    @media (max-width: 360px) {
+      flex-direction: column;
+    }
+  }
+
+  &__total {
+    margin: 6px 0 0 0;
+    font-family: 'MontserratBold';
+    font-size: 36px;
+    line-height: 44px;
+
+    span {
+      font-family: 'MontserratBold';
+    }
+  }
+
+  &__oldprice {
+    @media (max-width: 360px) {
+      text-align: center;
+    }
+  }
+
+  &__discount {
+    font-size: 14px;
+    line-height: 17px;
+    color: #333333;
+    margin: 0 0 0 12px;
+
+    s {
+      color: #bdbdbd;
+    }
+  }
+
+  &__form {
+    margin: 0 0 0 32px;
+    box-shadow: 0px 7px 13px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    padding: 30px 32px;
+    max-width: 385px;
+
+    @media (max-width: 900px) {
+      margin: 24px 0 0 0;
+    }
+
+    @media (max-width: 500px) {
+      padding: 24px 16px;
+      box-shadow: none;
+      padding: 0;
+    }
+  }
+
+  &__area {
+    width: 181px;
+    height: 110px;
+    background: $grey-4;
+    border-radius: 10px;
+    padding: 19px 0 0 11px;
+  }
+
+  &__area-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 160px;
+    margin: 8px 0 0 0;
+  }
+
+  &__other {
+    margin: 0 0 0 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (max-width: 456px) {
+      margin: 0;
+    }
+
+    p {
+      display: flex;
+      position: relative;
+      margin: 14px 0;
+
+      label {
+        position: relative;
+        padding: 0 0 0 66px;
+        cursor: pointer;
+
+        &::before {
+          position: absolute;
+          content: '';
+          left: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          width: 58px;
+          height: 36px;
+          background: #ffffff;
+          box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.15);
+          border-radius: 17.5px;
+        }
+
+        &:after {
+          position: absolute;
+          content: '';
+          width: 24px;
+          height: 24px;
+          border-radius: 24px;
+          left: 5px;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          background: #f4f4f4;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          transition: 300ms all;
+          transform: translateX(0);
+        }
+      }
+
+      input {
+        position: absolute;
+        left: -9999px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: $grey-2;
+
+        &:checked + label {
+          &:after {
+            background: $yellow;
+            transform: translateX(22px);
+          }
+        }
+      }
+    }
+  }
+
+  &__input {
+    width: 71px;
+    height: 48px;
+    border: 1px solid #bdbdbd;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #4f4f4f;
+    font-weight: 700;
+    text-align: center;
+
+    &:focus {
+      border: 1px solid $yellow;
+    }
+
+    &_error {
+      border: 1px solid #f10000 !important;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    padding: 24px 0 0 0;
+
+    @media (max-width: 456px) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: $grey-1;
+    text-transform: uppercase;
+    text-align: center;
+
+    @media (max-width: 900px) {
+      font-weight: 500;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &__subtitle {
+    margin: 8px 0 0 0;
+    font-size: 14px;
+    line-height: 17px;
+    color: $grey-1;
+    text-align: center;
+
+    @media (max-width: 900px) {
+      font-weight: 400;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  &__name {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+    color: $grey-2;
+  }
+
+  &__wrapper {
+    padding: 24px 0 0 0;
+
+    @media (max-width: 500px) {
+      padding: 20px 0 0 0;
+    }
+  }
+
+  &__container {
+    margin: 24px 0 0 0;
+    display: flex;
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__button {
+    width: 36px;
+    height: 36px;
+    border-radius: 34px;
+    background: #f2f2f2;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 2px;
+    border: none;
+    color: #4f4f4f;
+    cursor: pointer;
+
+    &:active {
+      background: $yellow;
+    }
+  }
+
+  &__count {
+    max-width: 432px;
+    width: 100%;
+  }
+
+  &__types {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @media (max-width: 500px) {
+      flex-direction: column;
+    }
+
+    p {
+      position: relative;
+
+      @media (max-width: 430px) {
+        min-width: 30% !important;
+        height: 45px;
+      }
+    }
+  }
+
+  &__label-type {
+    border-radius: 4px;
+    width: 140px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: $grey-1;
+    background: $grey-3;
+
+    @media (max-width: 500px) {
+      width: 100%;
+      margin: 10px 0 0 0;
+    }
+  }
+
+  &__type {
+    position: absolute;
+    left: -99999px;
+
+    &:checked + label {
+      transition: 300ms all;
+      background: $yellow;
+      border: 1px solid $yellow;
+      box-sizing: border-box;
+      color: #000;
+    }
+  }
+
+  &__apartment {
+    display: flex;
+    justify-content: flex-start;
+    margin: 24px 0 0 5px;
+
+    label {
+      position: relative;
+      font-size: 14px;
+      cursor: pointer;
+      color: $grey-2;
+
+      @media (max-width: 400px) {
+        font-size: 12px;
+      }
+
+      &::before {
+        position: absolute;
+        content: '';
+        width: 16px;
+        height: 16px;
+        border-radius: 16px;
+        background: #f5f4f4;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        left: -35px;
+        box-sizing: border-box;
+
+        &:hover {
+          border: 1px solid #c4c4c4;
+        }
+      }
+
+      &::after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -45px;
+        margin: auto;
+        width: 36px;
+        height: 36px;
+        content: '';
+
+        box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.15);
+        border-radius: 17.5px;
+      }
+    }
+
+    input {
+      position: absolute;
+      left: -99999px;
+
+      &:checked + label {
+        &::before {
+          content: '';
+          background: $yellow;
+          border: none;
+        }
+      }
+    }
+
+    p {
+      margin: 0 0 0 40px;
+    }
+  }
+
+  &__apt-margin {
+    margin: 0 0 0 90px !important;
+
+    @media (max-width: 420px) {
+      margin: 0 0 14px 56px !important;
+    }
+  }
+
+  &__apt-label {
+    font-size: 14px;
+    font-weight: 400;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      left: -30px;
+    }
+  }
+
+  &__rooms-label {
+    padding: 13px 20px;
+    border-radius: 4px;
+    border: 1px solid #737373;
+    margin: 0 0 0 12px;
+    cursor: pointer;
+    color: #737373;
+    font-size: 18px;
+    box-sizing: border-box;
+    font-weight: 400;
+
+    @media (max-width: 500px) {
+      margin: 0;
+    }
+  }
+
+  &__rooms {
+    display: flex;
+    position: relative;
+    margin: 24px 0 0 0;
+
+    input {
+      position: absolute;
+      left: -99999px;
+
+      &:checked + label {
+        background: $yellow;
+        transition: 300ms all;
+        border: 1px solid $yellow;
+        box-sizing: border-box;
+        color: #000;
+      }
+    }
+
+    p {
+      &:nth-of-type(1) .calculator__rooms-label {
+        margin: 0;
+      }
+
+      @media (max-width: 500px) {
+        &:nth-of-type(4),
+        &:nth-of-type(5),
+        &:nth-of-type(6) {
+          margin: 38px 0 0 0;
+        }
+
+        &:nth-of-type(5),
+        &:nth-of-type(6) {
+          margin: 38px 0 0 12px;
+        }
+
+        &:nth-of-type(2),
+        &:nth-of-type(3) {
+          margin: 0 0 0 12px;
+        }
+      }
+    }
+
+    @media (max-width: 500px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 160px;
+    }
+  }
+
+  &__showform {
+    margin: 16px 0 0 0;
+    height: 60px;
+    width: 100%;
+
+    &_hidden {
+      display: none;
+    }
+
+    @media (min-width: 900px) {
+      display: none;
+    }
+  }
+
+  .calc-form {
+    visibility: visible;
+    opacity: 1;
+    max-height: 400px;
+    transition: 300ms all;
+  }
+
+  .calc-form-hidden {
+    @media (max-width: 900px) {
+      overflow: hidden;
+      max-height: 0px;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}

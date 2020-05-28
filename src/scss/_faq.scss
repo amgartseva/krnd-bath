@@ -1,0 +1,127 @@
+.faq {
+  padding: 48px 0 56px 0;
+  background: $gray-bg;
+
+  &__list {
+    width: calc(100% - 32px);
+    max-width: 910px;
+    margin: auto;
+  }
+
+  &__panel {
+    width: 100%;
+    height: 75px;
+    background: #ffffff;
+    box-shadow: 0px 15px 30px rgba(83, 83, 83, 0.15);
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    padding: 30px 80px 30px 64px;
+    z-index: 10;
+    position: absolute;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 24px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 24px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background-image: url('../svg/sprite.svg#faq-arrow');
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 35px;
+      height: 35px;
+      transition: 300ms all;
+    }
+
+    @media (max-width: 600px) {
+      padding: 16px 64px 16px 12px;
+      font-size: 14px;
+      line-height: 20px;
+      height: 85px;
+    }
+  }
+
+  &__panel-hidden {
+    width: 100%;
+    background: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: 300ms all;
+    z-index: 0;
+    display: block;
+    padding: 110px 80px 46px 64px;
+    border-radius: 7px;
+
+    @media (max-width: 600px) {
+      padding: 110px 16px 32px 12px;
+    }
+  }
+
+  &__list-item {
+    position: relative;
+    margin: 24px 0 0 0;
+    max-height: 75px;
+    transition: 300ms all;
+
+    &_active {
+      max-height: 1000px;
+
+      .faq__panel-hidden {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .faq__panel::after {
+        transform: rotateZ(180deg);
+      }
+    }
+
+    &_disabled {
+      display: none;
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  &__consult {
+    border-top: 2px solid rgba(204, 204, 204, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 54px auto 0 auto;
+    padding: 24px 0 0 0;
+    max-width: 800px;
+  }
+
+  &__more {
+    width: 270px;
+    text-align: center;
+    font-family: 'MontserratBold';
+    margin: 32px auto 0 auto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: underline;
+    cursor: pointer;
+    color: #4f4f4f;
+
+    &_disabled {
+      display: none;
+    }
+  }
+
+  &__button {
+    width: 321px;
+    height: 60px;
+
+    @media (max-width: 500px) {
+      width: 100%;
+    }
+  }
+}

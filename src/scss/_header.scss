@@ -1,0 +1,130 @@
+.header {
+  background: #ffffff;
+  box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  height: 64px;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+
+  &__container {
+    max-width: 1200px;
+    padding: 0 30px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+    @media (max-width: 1200px) {
+      padding: 0 60px 0 30px;
+    }
+
+    @media (max-width: 600px) {
+      padding: 0 60px 0 16px;
+      justify-content: flex-start;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+  }
+
+  &__contact-item {
+    font-family: 'MontserratBold';
+    font-size: 14px;
+    line-height: 19px;
+    padding: 0 0 0 40px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 24px;
+      height: 24px;
+      margin: auto;
+      left: 0;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &_pin {
+      margin: 0 18px 0 0;
+
+      &::before {
+        background-image: url('../svg/sprite.svg#header-pin');
+      }
+
+      @media (max-width: 600px) {
+        display: none;
+      }
+    }
+
+    &_tel {
+      color: #000;
+      text-decoration: none;
+
+      &::before {
+        background-image: url('../svg/sprite.svg#header-tel');
+      }
+
+      @media (max-width: 1200px) {
+        display: none;
+      }
+
+      @media (max-width: 600px) {
+        display: block;
+      }
+    }
+  }
+
+  &__logo {
+    height: 40px;
+    width: 90px;
+
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+
+  &__nav {
+    display: flex;
+    height: 100%;
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  &__nav-item {
+    text-decoration: none;
+    color: $title-gray;
+    height: 100%;
+    padding: 0 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 21px;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.04);
+    }
+
+    &:active {
+      background: rgba(242, 201, 76, 0.6);
+    }
+  }
+}

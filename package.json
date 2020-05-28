@@ -1,0 +1,32 @@
+{
+  "name": "gulplearn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "del": "^5.0.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "gulp-install": "^1.1.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "eslint": "^6.3.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^6.1.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^4.14.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
